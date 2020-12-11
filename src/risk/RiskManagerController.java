@@ -25,9 +25,9 @@ public class RiskManagerController {
 
 
 /*
-    RiskAnalysis
+    RiskAnalysis - Louise
     Risk - Malte
-    Archive (Persistens) -
+    Archive (Louise)
     GUI.FXML  (id buttons) - Jenna/Laila/Louise
        # Prototype -> Sara
     Controller - all
