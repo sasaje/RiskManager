@@ -36,6 +36,17 @@ public class Risk {
         <<constructor>> Risk(title: String, probability: String, consequence: String, priority: int, responseStrategy: String, revisedConsequence: String, revisedPriority: double)
         + checkForDuplicateName(riskTitle: String)
 
+
+        boolean nameInUse = false;
+
+        for(Risk risk : risk){
+            nameInUse = risk.checkForDuplicateName(riskTitle);
+            if(nameInUse){
+                throw new DuplicateRiskException();
+            }
+        }
+
+
         public boolean checkForDuplicateName(String riskTitle){
             return this.name.equals(name);
         }
