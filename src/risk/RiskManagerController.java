@@ -23,8 +23,8 @@ public class RiskManagerController {
     */
 }
 
-
 /*
+
     RiskAnalysis - Louise
     Risk - Malte
     Archive (Louise)
@@ -32,4 +32,5 @@ public class RiskManagerController {
        # Prototype -> Sara
     Controller - all
     RiskManagerController - Sara
+
 */
