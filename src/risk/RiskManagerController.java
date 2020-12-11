@@ -2,7 +2,6 @@ package risk;
 
 public class RiskManagerController {
 
-
     /* CLASS DIAGRAM
         - currentRiskAnalysis : RiskAnalysis
 
@@ -23,3 +22,14 @@ public class RiskManagerController {
 
     */
 }
+
+
+/*
+    RiskAnalysis
+    Risk - Malte
+    Archive (Persistens) -
+    GUI.FXML  (id buttons) - Jenna/Laila/Louise
+       # Prototype -> Sara
+    Controller - all
+    RiskManagerController - Sara
+*/
