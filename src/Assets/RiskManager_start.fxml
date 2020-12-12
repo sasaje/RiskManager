@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #060446#060446;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="RISK MANAGER">
+               <font>
+                  <Font name="Thonburi" size="37.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="90.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="52.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="overviewBtn" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;Overview risk analysis">
+               <font>
+                  <Font name="Thonburi" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="90.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="creatBtn" mnemonicParsing="false" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #9FF81B#9FF81B; -fx-background-radius: 90;" text="+ Creat new risk analysis">
+               <HBox.margin>
+                  <Insets left="90.0" top="40.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Thonburi" size="14.0" />
+               </font>
+            </Button>
+            <TextField prefHeight="60.0" prefWidth="400.0" promptText="         Search for risk analysis" style="-fx-background-radius: 90; -fx-border-color: #9FF81B#9FF81B; -fx-border-width: 3; -fx-border-radius: 90;">
+               <HBox.margin>
+                  <Insets left="45.0" top="40.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ChoiceBox prefHeight="60.0" prefWidth="250.0" style="-fx-border-color: #9FF81B#9FF81B; -fx-border-radius: 90; -fx-background-color: WHITE; -fx-border-width: 3; -fx-background-radius: 90;">
+               <HBox.margin>
+                  <Insets left="45.0" top="40.0" />
+               </HBox.margin>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <Label text="Overview risk analyzes(all)">
+         <font>
+            <Font name="Thonburi" size="35.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="90.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <TableView prefHeight="330.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn prefWidth="201.91236877441406" text="Risk analysis" />
+          <TableColumn minWidth="0.0" prefWidth="236.3736572265625" text="Date" />
+            <TableColumn prefWidth="286.6263427734375" text="Recent changed" />
+            <TableColumn prefWidth="209.88031005859375" text="Edit/Delete" />
+        </columns>
+         <VBox.margin>
+            <Insets bottom="10.0" left="90.0" right="250.0" top="10.0" />
+         </VBox.margin>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="25.0" prefWidth="1280.0" style="-fx-background-color: #060446#060446;">
+         <VBox.margin>
+            <Insets top="34.0" />
+         </VBox.margin>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Risk Manager 2020">
+               <font>
+                  <Font name="Thonburi" size="11.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>
