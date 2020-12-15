@@ -9,13 +9,14 @@
 package risk;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class RiskAnalysis {
 
     private String riskAnalysisTitle;
     private ArrayList<Risk> risks = new ArrayList<>();
-    private LocalDate lastSaveDate;
+    private LocalDateTime lastSaveDate;
     private LocalDate publishedDate;
 
     public String getRiskAnalysisTitle() {
@@ -34,13 +35,23 @@ public class RiskAnalysis {
         this.risks = risks;
     }
 
-    public LocalDate getLastSaveDate() {
-        return lastSaveDate;
+    //needed?
+    /*    public LocalDate getLastSaveDate() {
+            return lastSaveDate;
+        }
+    */
+
+    public LocalDateTime getLastSavedDate(){
+        //Getting the current date-time value
+        LocalDateTime dateTime = LocalDateTime.now();
+        return dateTime;
     }
 
-    public void setLastSaveDate(LocalDate lastSaveDate) {
-        this.lastSaveDate = lastSaveDate;
-    }
+    //not needed
+    /*    public void setLastSaveDate(LocalDate lastSaveDate) {
+            this.lastSaveDate = lastSaveDate;
+        }
+    */
 
     public LocalDate getPublishedDate() {
         return publishedDate;
@@ -49,7 +60,6 @@ public class RiskAnalysis {
     public void setPublishedDate(LocalDate publishedDate) {
         this.publishedDate = publishedDate;
     }
-
 
 /*    public void addRisk(){
         Risk risk = new Risk();
