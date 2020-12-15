@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Controller">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #060446#060446;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="RISK MANAGER">
+               <font>
+                  <Font name="Thonburi" size="37.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="90.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="696.0" prefHeight="25.0" prefWidth="1280.0" style="-fx-background-color: #060446#060446;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Risk Manager 2020">
+               <font>
+                  <Font name="Thonburi" size="11.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox layoutY="90.0" prefHeight="52.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="menuBtView" mnemonicParsing="false" onAction="#clickBtToStart" style="-fx-background-color: transparant;" text="&gt;&gt;  View risk analysis">
+               <font>
+                  <Font name="Thonburi" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="90.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  Creat risk analysis">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="90.0" layoutY="170.0" text="Risk analysis">
+         <font>
+            <Font name="Thonburi" size="35.0" />
+         </font>
+      </Label>
+      <TextField layoutX="90.0" layoutY="220.0" prefHeight="40.0" prefWidth="1100.0" promptText="Type  risk analysis Title" />
+      <Button fx:id="addBtn" layoutX="90.0" layoutY="280.0" mnemonicParsing="false" onAction="#addBtnHandler" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Add risk">
+         <font>
+            <Font name="Thonburi" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveBtnRA" layoutX="90.0" layoutY="380.0" mnemonicParsing="false" onAction="#saveBtnRAHandler" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Save changes">
+         <font>
+            <Font name="Thonburi" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancel1Btn" layoutX="340.0" layoutY="380.0" mnemonicParsing="false" onAction="#clickBtToStart" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: WHITE; -fx-border-color: #9FF81B#9FF81B; -fx-border-radius: 90; -fx-border-width: 3;" text="Cancel risk analysis">
+         <font>
+            <Font name="Thonburi" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
