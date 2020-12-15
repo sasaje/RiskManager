@@ -50,6 +50,7 @@ public class RiskAnalysis {
         this.publishedDate = publishedDate;
     }
 
+
 /*    public void addRisk(){
         Risk risk = new Risk();
         risk.setRiskTitle("");
@@ -57,7 +58,7 @@ public class RiskAnalysis {
         System.out.println("Risk added");
     }
 */
-    /*with probability as double*/
+    /*addRisk with probability as double*/
     public void addRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
         risk.setRiskTitle(title);
@@ -70,7 +71,7 @@ public class RiskAnalysis {
         risks.add(risk);
         System.out.println("Risk added (probability as double)");
     }
-    /*with probability as String*/
+    /*addRisk with probability as String*/
     public void addRisk(String title, String altProbability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
         risk.setRiskTitle(title);
@@ -84,6 +85,28 @@ public class RiskAnalysis {
         System.out.println("Risk added (with probability as String)");
     }
 
+    /*Create new riskAnalysis*/
+    public void createRiskAnalysis(String riskAnalysisTitle){
+
+    }
+
+    /*edit a riskAnalysis*/
+    public void editRiskAnalysis(String riskAnalysisTitle){
+
+    }
+    /*delete a riskAnalysis*/
+    public void deleteRiskAnalysis(String riskAnalysisTitle){
+
+    }
+    /*save a riskAnalysis*/
+    public void saveRiskAnalysis(String riskAnalysisTitle){
+
+    }
+
+    /*confirmDeletionRiskAnalysis*/
+    public void confirmDeletionRiskAnalysis(String riskAnalysisTitle){
+
+    }
 
     /*
         - lastSavedDate : LocalDate
@@ -95,7 +118,11 @@ public class RiskAnalysis {
         + addRisk(title: String, probability: double, consequence: String, priority: int, responseStrategy: String, revisedConsequence: String, revisedPriority: double)
         + getPublishedDate : LocalDate
         + getLastSavedDate : LocalDate
-
+        + createRiskAnalysis(riskAnalysisTitle: String)
+        + deleteRiskAnalysis(riskAnalysisTitle: String)
+        + editRiskAnalysis(riskAnalysisTitle: String)
+        + saveRiskAnalysis(riskAnalysisTitle: String)
+        + confirmDeletionRiskAnalysis(riskAnalysisTitle: String)
     * */
 
 
