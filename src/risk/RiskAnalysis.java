@@ -57,19 +57,6 @@ public class RiskAnalysis {
         System.out.println("Risk added");
     }
 */
-    /*with probability as String*/
-    public void addRisk(String title, String probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
-        Risk risk = new Risk();
-        risk.setRiskTitle(title);
-        risk.setProbability(probability);
-        risk.setConsequence(consequence);
-        risk.setPriority(priority);
-        risk.setResponseStrategy(responseStrategy);
-        risk.setRevisedConsequence(revisedConsequence);
-        risk.setRevisedPriority(revisedPriority);
-        risks.add(risk);
-        System.out.println("Risk added");
-    }
     /*with probability as double*/
     public void addRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
@@ -81,7 +68,20 @@ public class RiskAnalysis {
         risk.setRevisedConsequence(revisedConsequence);
         risk.setRevisedPriority(revisedPriority);
         risks.add(risk);
-        System.out.println("Risk added");
+        System.out.println("Risk added (probability as double)");
+    }
+    /*with probability as String*/
+    public void addRisk(String title, String altProbability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
+        Risk risk = new Risk();
+        risk.setRiskTitle(title);
+        risk.setAltProbability(altProbability);
+        risk.setConsequence(consequence);
+        risk.setPriority(priority);
+        risk.setResponseStrategy(responseStrategy);
+        risk.setRevisedConsequence(revisedConsequence);
+        risk.setRevisedPriority(revisedPriority);
+        risks.add(risk);
+        System.out.println("Risk added (with probability as String)");
     }
 
 
