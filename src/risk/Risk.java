@@ -19,9 +19,10 @@ public class Risk {
     private String revisedConsequence;
     private double revisedPriority;
 
-    public String getRiskTitle(){
+    public String getRiskTitle() {
         return riskTitle;
     }
+
     public void setRiskTitle(String riskTitle) {
         this.riskTitle = riskTitle;
     }
@@ -29,6 +30,7 @@ public class Risk {
     public double getProbability() {
         return probability;
     }
+
     public void setProbability(double probability) {
         this.probability = probability;
     }
@@ -36,6 +38,7 @@ public class Risk {
     public String getAltProbability() {
         return altProbability;
     }
+
     public void setAltProbability(String altProbability) {
         this.altProbability = altProbability;
     }
@@ -43,6 +46,7 @@ public class Risk {
     public String getConsequence() {
         return consequence;
     }
+
     public void setConsequence(String consequence) {
         this.consequence = consequence;
     }
@@ -50,6 +54,7 @@ public class Risk {
     public int getPriority() {
         return priority;
     }
+
     public void setPriority(int priority) {
         this.priority = priority;
     }
@@ -57,6 +62,7 @@ public class Risk {
     public String getResponseStrategy() {
         return responseStrategy;
     }
+
     public void setResponseStrategy(String responseStrategy) {
         this.responseStrategy = responseStrategy;
     }
@@ -64,6 +70,7 @@ public class Risk {
     public String getRevisedConsequence() {
         return revisedConsequence;
     }
+
     public void setRevisedConsequence(String revisedConsequence) {
         this.revisedConsequence = revisedConsequence;
     }
@@ -71,13 +78,15 @@ public class Risk {
     public double getRevisedPriority() {
         return revisedPriority;
     }
+
     public void setRevisedPriority(double revisedPriority) {
         this.revisedPriority = revisedPriority;
     }
 
-    Risk(){}
+    Risk() {
+    }
 
-    Risk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority){
+    Risk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         this.riskTitle = title;
         this.probability = probability;
         this.consequence = consequence;
@@ -86,7 +95,8 @@ public class Risk {
         this.revisedConsequence = revisedConsequence;
         this.revisedPriority = revisedPriority;
     }
-    Risk(String title, String probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority){
+
+    Risk(String title, String probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         this.riskTitle = title;
         this.altProbability = probability;
         this.consequence = consequence;
@@ -96,17 +106,8 @@ public class Risk {
         this.revisedPriority = revisedPriority;
     }
 
-    //TODO checkForDuplicateName
-    public void checkForDuplicateName(riskTitle) {
-        boolean nameInUse = false;
-        for (Risk risk : risk) {
-            nameInUse = risk.checkForDuplicateName(riskTitle);
-            if (nameInUse) {
-                throw new DuplicateRiskException();
-            }
-        }
+}
 
-    }
 
     /*
         title: String
@@ -139,4 +140,3 @@ public class Risk {
             return this.name.equals(name);
         }
     */
-}
