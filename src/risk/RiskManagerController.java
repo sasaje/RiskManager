@@ -1,6 +1,16 @@
 package risk;
 
+import java.io.FileNotFoundException;
+
 public class RiskManagerController {
+Archive archive = new Archive();
+Project project = new Project();
+    public void bootUp(){
+        //archive.load();
+    }
+    public void save() throws FileNotFoundException {
+        archive.save(project);
+    }
 
     /* CLASS DIAGRAM
         - currentRiskAnalysis : RiskAnalysis

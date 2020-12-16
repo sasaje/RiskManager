@@ -106,4 +106,8 @@ public class Risk {
         this.revisedPriority = revisedPriority;
     }
 
+    /*public String toString() {
+        String returnedString = "#" + riskTitle + "¤" + probability + "¤" + consequence + "¤" + priority + "¤";
+        return returnedString;
+    }*/
 }

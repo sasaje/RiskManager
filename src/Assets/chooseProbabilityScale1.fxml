@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.52" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="290.0" layoutY="100.0" prefHeight="200.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="292.0" layoutY="100.0" prefHeight="200.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <TextField id="textChooseProbabilityScale" alignment="CENTER" prefHeight="85.0" prefWidth="700.0" style="-fx-background-color: #F5F0F0;" text="Choose probability scale">
                <font>
@@ -20,31 +20,31 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Hyperlink id="percentScaleLink" fx:id="percentScale" layoutX="124.0" layoutY="102.0" onAction="#choosePercentScale" style="-fx-font-style: #000000;" text="Percent scale">
+            <Button id="exitPopUpButton" fx:id="closePopUpBtn" layoutX="662.0" mnemonicParsing="false" onAction="#closePopUp" style="-fx-border-color: #F5F0F0; -fx-background-color: #F5F0F0;" text="X">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
-            </Hyperlink>
-            <Hyperlink id="levelScaleLink" fx:id="LevelScale" layoutX="124.0" layoutY="144.0" onAction="#chooseLevelScale" text="Level scale">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Hyperlink>
-            <Hyperlink id="choosePercentScaleLink" fx:id="choosePercentButton" layoutX="465.0" layoutY="111.0" onAction="#choosePercentScale" text="Choose">
+            </Button>
+            <Button fx:id="choosePercentScaleBtn" layoutX="439.0" layoutY="111.0" mnemonicParsing="false" onAction="#choosePercentScale" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF;" text="Choose">
                <font>
                   <Font size="11.0" />
                </font>
-            </Hyperlink>
-            <Hyperlink id="chooseLevelScaleLink" fx:id="chooseLevelButton" layoutX="465.0" layoutY="152.0" onAction="#chooseLevelScale" text="Choose">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Hyperlink>
-            <TextField id="xOnTopOfButton" alignment="CENTER" layoutX="664.0" prefHeight="28.0" prefWidth="36.0" style="-fx-background-color: #F5F0F0;" text="X">
+            </Button>
+            <Label fx:id="percentScale1" layoutX="130.0" layoutY="106.0" style="-fx-color: #000000;" text="Percent scale">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
-            </TextField>
+            </Label>
+            <Label fx:id="levelScale" layoutX="130.0" layoutY="148.0" style="-fx-color: #000000;" text="Level scale">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="chooseLevelScaleBtn" layoutX="439.0" layoutY="147.0" mnemonicParsing="false" onAction="#chooseLevelScale" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF;" text="Choose">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

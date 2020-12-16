@@ -144,4 +144,7 @@ public class RiskAnalysis {
         int indexNr = risks.indexOf(formerTitle);
         risks.set(indexNr, risk);
     }
+    public String toString () {
+        return riskAnalysisTitle;
+    }
 }

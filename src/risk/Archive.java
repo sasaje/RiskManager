@@ -5,7 +5,7 @@
  * 11/12/2020
  *
  */
-/*
+
 package risk;
 
 import javafx.event.ActionEvent;
@@ -27,7 +27,7 @@ public class Archive {
         - Indlæs fra archive.txt og overfør alle elementer til Arraylist riskAnalyzes<> i Project klassen.
 
 
-
+     */
 
     void save(ActionEvent event) {
 
@@ -88,5 +88,24 @@ public class Archive {
             e.printStackTrace();
         }
     }
+
+    //Forslag til save funktion:
+    public void save(Project project) throws FileNotFoundException {
+        java.io.File file = new java.io.File("archive.txt");
+        java.io.PrintWriter output = new java.io.PrintWriter(file);
+        for (RiskAnalysis riskAnalysis : project.getRiskAnalyzes()) {
+            output.println(riskAnalysis.toString());
+            for (Risk risk : riskAnalysis.getRisks()) {
+                output.println("@#" + risk.getRiskTitle() + "\n" + "#" + risk.getProbability() + "\n" + "#" + risk.getAltProbability() + "\n"
+                        + "#" + risk.getConsequence() + "\n" + "#" + risk.getPriority() + "\n" + "#" + risk.getResponseStrategy() + "\n" +
+                        "#" + risk.getRevisedConsequence() + "\n" + "#" + risk.getRevisedPriority() + "\n");
+            }
+        }
+        output.close();
+    }
+public void load() throws FileNotFoundException {
+
 }
-*/
+}
+
+
