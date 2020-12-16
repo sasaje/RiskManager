@@ -15,6 +15,23 @@ public class Project {
     private ArrayList<RiskAnalysis> riskAnalyzes = new ArrayList<>();
     private ArrayList<RiskAnalysis> currentRiskAnalysis = new ArrayList<>(); // max one riskanalysis in this arrayList
 
+    public ArrayList<RiskAnalysis> getRiskAnalyzes() {
+        return riskAnalyzes;
+    }
+
+    public void setRiskAnalyzes(ArrayList<RiskAnalysis> riskAnalyzes) {
+        this.riskAnalyzes = riskAnalyzes;
+    }
+
+    public ArrayList<RiskAnalysis> getCurrentRiskAnalysis() {
+        return currentRiskAnalysis;
+    }
+
+    public void setCurrentRiskAnalysis(ArrayList<RiskAnalysis> currentRiskAnalysis) {
+        this.currentRiskAnalysis = currentRiskAnalysis;
+    }
+
+
     // A Class that represents use-defined exception
     class NoCurrentRiskAnalysis extends Exception {
         private String r;
@@ -41,13 +58,13 @@ public class Project {
 
     /*Create new riskAnalysis*/
     public void createRiskAnalysis(String riskAnalysisTitle){
-
         if (riskAnalysisTitle == null) throw new NullPointerException("riskAnalysis");
 
         else{
-            RiskAnalysis currentRiskAnalysis = new RiskAnalysis();
-            currentRiskAnalysis.setRiskAnalysisTitle(currentRiskAnalysis.getRiskAnalysisTitle());
-            riskAnalyzes.add(currentRiskAnalysis);
+            RiskAnalysis riskAnalysis = new RiskAnalysis();
+            riskAnalysis.setRiskAnalysisTitle(riskAnalysisTitle);
+
+            riskAnalyzes.add(riskAnalysis);
             System.out.println("RiskAnalysis created");
             //call save?
         }
