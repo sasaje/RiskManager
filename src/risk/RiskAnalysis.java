@@ -89,15 +89,7 @@ public class RiskAnalysis {
         System.out.println("Risk added (with probability as String)");
     }
 
-    // A Class that represents use-defined exception
-    class NoCurrentRiskAnalysis extends Exception {
-        private String r;
 
-        public NoCurrentRiskAnalysis(String r) {
-            // Call constructor of parent Exception
-            super(r + " was not created");
-        }
-    }
 
 
 

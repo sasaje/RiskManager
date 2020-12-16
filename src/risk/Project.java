@@ -7,15 +7,23 @@
  */
 
 package risk;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Project {
 
     private ArrayList<RiskAnalysis> riskAnalyzes = new ArrayList<>();
     private ArrayList<RiskAnalysis> currentRiskAnalysis = new ArrayList<>(); // max one riskanalysis in this arrayList
+
+
+    // A Class that represents use-defined exception
+    class NoCurrentRiskAnalysis extends Exception {
+        private String r;
+
+        public NoCurrentRiskAnalysis(String r) {
+            // Call constructor of parent Exception
+            super(r + " was not created");
+        }
+    }
 
     /*Create new riskAnalysis*/
     public void createRiskAnalysis(RiskAnalysis riskAnalysis){
