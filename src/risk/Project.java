@@ -44,7 +44,7 @@ public class Project {
     public void createRiskAnalysis(String riskAnalysisTitle){
         if (riskAnalysisTitle == null) throw new NullPointerException("RiskAnalysis doesn't exist");
 
-        //checkForDublicates exception()
+        //checkForDublicates exception()?
 
         else{
             RiskAnalysis riskAnalysis = new RiskAnalysis();
@@ -73,6 +73,7 @@ public class Project {
         int indexNr = riskAnalyzes.indexOf(riskAnalysisTitle);
         riskAnalyzes.remove(indexNr);
     }
+
     /*save a riskAnalysis*/
     public void saveRiskAnalysis(String riskAnalysisTitle){
 
