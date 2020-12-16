@@ -15,17 +15,7 @@
                   <Font size="10.0" />
                </font>
             </TextField>
-            <TextField id="textChooseProbabilityScale" alignment="CENTER" prefHeight="85.0" prefWidth="700.0" style="-fx-background-color: #F5F0F0;" text="Choose probability scale">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </TextField>
-            <Button id="exitPopUpButton" fx:id="closeWindowButton" layoutX="664.0" mnemonicParsing="false" onAction="#closePopUp" text="X" visible="false">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Button>
-            <TextField id="xOnTopOfButton" alignment="CENTER" layoutX="664.0" prefHeight="28.0" prefWidth="36.0" style="-fx-background-color: #F5F0F0;" text="X">
+            <TextField id="textChooseProbabilityScale" alignment="CENTER" prefHeight="85.0" prefWidth="700.0" style="-fx-background-color: #F5F0F0; -fx-color: #000000;" text="Choose priority">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -35,7 +25,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <TextField layoutX="95.0" layoutY="338.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;" text="Probability: MEDIUM">
+            <TextField layoutX="95.0" layoutY="338.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;" text="Priority: LOW">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -60,9 +50,14 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <Button fx:id="addProbabilityToRiskButton" layoutX="375.0" layoutY="330.0" mnemonicParsing="false" onAction="#addPropabilityToRisk" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 90; -fx-border-color: #9FF81B#9FF81B; -fx-background-color: WHITE; -fx-border-radius: 90; -fx-border-width: 2;" text="+ Add to risk">
+            <Button fx:id="addProbabilityToRiskBtn" layoutX="375.0" layoutY="330.0" mnemonicParsing="false" onAction="#addPropabilityToRisk" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 90; -fx-border-color: #9FF81B#9FF81B; -fx-background-color: WHITE; -fx-border-radius: 90; -fx-border-width: 2;" text="+ Add to risk">
                <font>
                   <Font size="13.0" />
+               </font>
+            </Button>
+            <Button id="exitPopUpButton" fx:id="closePopUpBtn" layoutX="662.0" mnemonicParsing="false" onAction="#closePopUp" style="-fx-border-color: #F5F0F0; -fx-background-color: #F5F0F0;" text="X">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <Button fx:id="goBackBtn" layoutX="324.0" layoutY="438.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF;" text="&lt; Go back" />
