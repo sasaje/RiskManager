@@ -35,7 +35,7 @@ public class RiskAnalysis {
         this.risks = risks;
     }*/
 
-    public LocalDateTime getLastSavedDate(){
+    public LocalDateTime getLastSavedDate() {
         //Getting the current date-time value
         LocalDateTime dateTime = LocalDateTime.now();
         return dateTime;
@@ -55,13 +55,13 @@ public class RiskAnalysis {
         this.publishedDate = publishedDate;
     }
 
-/*    public void addRisk(){
+    public void addRisk() {
         Risk risk = new Risk();
         risk.setRiskTitle("");
         risks.add(risk);
         System.out.println("Risk added");
     }
-*/
+
     /*addRisk with probability as double*/
     public void addRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
@@ -75,6 +75,7 @@ public class RiskAnalysis {
         risks.add(risk);
         System.out.println("Risk added (probability as double)");
     }
+
     /*addRisk with probability as String*/
     public void addRisk(String title, String altProbability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
@@ -89,29 +90,51 @@ public class RiskAnalysis {
         System.out.println("Risk added (with probability as String)");
     }
 
-
-
-
-
-    /*confirmDeletionRiskAnalysis*/
-    public void confirmDeletionRiskAnalysis(String riskAnalysisTitle){
-
+    //deleteRisk
+    public void deleteRisk(String riskTitle) {
+        //boolean arrayListContainsRisk = risks.contains(riskTitle);
+        //if (arrayListContainsRisk) {
+        int indexNr = risks.indexOf(riskTitle);
+        risks.remove(indexNr);
+        // }
+        //else throw new riskDoesntExistException;
     }
 
-    /*
-        - lastSavedDate : LocalDate
-        - publishedDate : LocalDate
-        - Risks : Risk[]
+    //editRisk
+    public Risk editRisk(String riskTitle) {
+        //boolean arrayListContainsRisk = risks.contains(riskTitle);
+        //if (arrayListContainsRisk) {
+        int indexNr = risks.indexOf(riskTitle);
+        Risk risk = risks.get(indexNr);
+        return risk;
+    }
 
-    /////////
+    //saveRisk with double probability
+    public void saveRisk(String formerTitle, String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
+        Risk risk = new Risk();
+        risk.setRiskTitle(title);
+        risk.setProbability(probability);
+        risk.setConsequence(consequence);
+        risk.setPriority(priority);
+        risk.setResponseStrategy(responseStrategy);
+        risk.setRevisedConsequence(revisedConsequence);
+        risk.setRevisedPriority(revisedPriority);
+        int indexNr = risks.indexOf(formerTitle);
+        risks.set(indexNr, risk);
+    }
 
-        + addRisk(title: String, probability: double, consequence: String, priority: int, responseStrategy: String, revisedConsequence: String, revisedPriority: double)
-        + getPublishedDate : LocalDate
-        + getLastSavedDate : LocalDate
-        + createRiskAnalysis(riskAnalysisTitle: String)
-        + deleteRiskAnalysis(riskAnalysisTitle: String)
-        + editRiskAnalysis(riskAnalysisTitle: String)
-        + saveRiskAnalysis(riskAnalysisTitle: String)
-        + confirmDeletionRiskAnalysis(riskAnalysisTitle: String)
-    * */
+    //saveRisk with String probability
+    public void saveRisk(String formerTitle, String title, String altProbability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
+        Risk risk = new Risk();
+        risk.setRiskTitle(title);
+        risk.setAltProbability(altProbability);
+        risk.setConsequence(consequence);
+        risk.setPriority(priority);
+        risk.setResponseStrategy(responseStrategy);
+        risk.setRevisedConsequence(revisedConsequence);
+        risk.setRevisedPriority(revisedPriority);
+        int indexNr = risks.indexOf(formerTitle);
+        risks.set(indexNr, risk);
+
+    }
 }
