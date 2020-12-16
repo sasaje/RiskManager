@@ -54,12 +54,12 @@
          </font>
       </Label>
       <TextField fx:id="riskAnalysisTitleTextField" layoutX="90.0" layoutY="220.0" prefHeight="40.0" prefWidth="1100.0" promptText="Type  risk analysis Title" />
-      <Button fx:id="addRABtn" layoutX="90.0" layoutY="280.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Add risk">
+      <Button fx:id="addRiskBtn" layoutX="90.0" layoutY="280.0" onAction="#addRiskAction" mnemonicParsing="false"  prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Add risk">
          <font>
             <Font name="Thonburi" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="saveRABtn" layoutX="90.0" layoutY="380.0" onAction="#saveChangeAction" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Save changes">
+      <Button fx:id="saveRABtn" layoutX="90.0" layoutY="380.0" onAction="#saveRiskAnalysisAction" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Save changes">
          <font>
             <Font name="Thonburi" size="14.0" />
          </font>

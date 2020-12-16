@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #060446#060446;" AnchorPane.bottomAnchor="630.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -30,34 +30,34 @@
       </HBox>
       <HBox layoutY="90.0" prefHeight="52.0" prefWidth="1280.0">
          <children>
-            <Button fx:id="menuBtoverview" mnemonicParsing="false" onAction="#clickBtToStart" style="-fx-background-color: transparant;" text="&gt;&gt;  Overview risk analyzes">
+            <Button fx:id="topOverViewBtn" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  Overview risk analyzes">
                <HBox.margin>
                   <Insets left="90.0" top="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  RiskAnalysisName">
+            <Button fx:id="topRiskAnalysisTitleBtn" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  RiskAnalysisTitle">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="menuBtcreat" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  Creat risk">
+            <Button mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  Creat risk">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
             </Button>
          </children>
       </HBox>
-      <Button fx:id="saveBtnRisk" layoutX="90.0" layoutY="600.0" mnemonicParsing="false" onAction="#SaveBtnRiskHandler" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Save changes">
+      <Button fx:id="saveRiskBtn" layoutX="90.0" layoutY="600.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-background-color: #9FF81B#9FF81B;" text="+ Save changes">
          <font>
             <Font name="Thonburi" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="cancelBtnRisk" layoutX="330.0" layoutY="600.0" mnemonicParsing="false" onAction="#saveBtnRAHandler" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-border-color: #9FF81B#9FF81B; -fx-background-color: WHITE; -fx-border-radius: 90; -fx-border-width: 3;" text="Cancel risk">
+      <Button fx:id="cancelRiskBtn" layoutX="330.0" layoutY="600.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 90; -fx-border-color: #9FF81B#9FF81B; -fx-background-color: WHITE; -fx-border-radius: 90; -fx-border-width: 3;" text="Cancel risk">
          <font>
             <Font name="Thonburi" size="14.0" />
          </font>
       </Button>
-      <TextField layoutX="90.0" layoutY="190.0" prefHeight="40.0" prefWidth="530.0" style="-fx-border-color: #929292#929292;" />
+      <TextField fx:id="riskTitleTextField" layoutX="90.0" layoutY="190.0" prefHeight="40.0" prefWidth="530.0" style="-fx-border-color: #929292#929292;" />
       <Label layoutX="90.0" layoutY="160.0" text="Risk Name">
          <font>
             <Font name="Thonburi" size="18.0" />
@@ -68,26 +68,26 @@
             <Font name="Thonburi" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="660.0" layoutY="190.0" prefHeight="40.0" prefWidth="530.0" style="-fx-border-color: #929292#929292;" />
+      <TextField fx:id="riskFileNameTextField" layoutX="660.0" layoutY="190.0" prefHeight="40.0" prefWidth="530.0" style="-fx-border-color: #929292#929292;" />
       <Label layoutX="90.0" layoutY="250.0" text="Probability">
          <font>
             <Font name="Thonburi" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="90.0" layoutY="280.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
+      <TextField fx:id="riskProbabilityTextField" layoutX="90.0" layoutY="280.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
       <Label layoutX="370.0" layoutY="250.0" text="Consequence">
          <font>
             <Font name="Thonburi" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="370.0" layoutY="280.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
-      <ChoiceBox layoutX="660.0" layoutY="280.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292; -fx-background-color: WHITE;" />
+      <TextField fx:id="riskConsequenceTextField" layoutX="370.0" layoutY="280.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
+      <ChoiceBox fx:id="riskPriorityChoicebox" layoutX="660.0" layoutY="280.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292; -fx-background-color: WHITE;" />
       <Label layoutX="660.0" layoutY="250.0" text="Priority">
          <font>
             <Font name="Thonburi" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="330.0" text="Response Strategy">
+      <Label layoutX="90.0" layoutY="350.0" text="Response Strategy">
          <font>
             <Font name="Thonburi" size="18.0" />
          </font>
@@ -102,8 +102,13 @@
             <Font name="Thonburi" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="90.0" layoutY="360.0" prefHeight="200.0" prefWidth="500.0" style="-fx-border-color: #929292#929292;" />
-      <TextField layoutX="660.0" layoutY="360.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
-      <TextField layoutX="940.0" layoutY="360.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
+      <TextArea fx:id="riskResponseStrategyText" layoutX="90.0" layoutY="380.0" prefHeight="200.0" prefWidth="500.0" style="-fx-border-color: #929292#929292;" />
+      <TextField fx:id="riskRevisedProbabilityTextField" layoutX="660.0" layoutY="360.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
+      <TextField fx:id="riskRevisedConsequenceTextField" layoutX="940.0" layoutY="360.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #929292#929292;" />
+      <Button fx:id="chooseScaleRiskBtn" layoutX="90.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="+Choose another probability scale" textFill="#9a9a9a">
+         <font>
+            <Font name="Thonburi" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -63,7 +63,7 @@ public class RiskManager extends Application {
         }
     }
 
-        public int setCreatPage(RiskAnalysisModel model) {
+        public int setCreatePage(RiskAnalysisModel model) {
             try{
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(RiskManager.class.getResource("RiskManager_creat.fxml"));
@@ -87,27 +87,32 @@ public class RiskManager extends Application {
                 e.printStackTrace();
                 return 0;
             }
+        }
+
+
+        public void setAddPage(RiskModel riskModel) {
+            try {
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(RiskManager.class.getResource("RiskManager_creat.fxml"));
+                AnchorPane add = loader.load();
+
+                Stage addPage = new Stage();
+                addPage.setTitle("Risk Manager 2020");
+                addPage.initModality(Modality.WINDOW_MODAL);
+                addPage.initOwner(primaryStage);
+                Scene scene = new Scene(add);
+                addPage.setScene(scene);
+
+                AddController addController = loader.getController();
+                addController.setAddStage(addPage);
+                addController.setRiskModel(riskModel);
+
+                addPage.show();
+            }catch (IOException e) {
+                e.printStackTrace();
+            }
 
         }
-    
-
-
-
-
-
-
-
-
-
-    /* @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("RiskManager_start.fxml"));
-        primaryStage.setTitle("Risk Manager 2020");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.setResizable(false);
-        primaryStage.show();
-
-    } */
 
     public static void main(String[] args) {
         launch(args);

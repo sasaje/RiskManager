@@ -2,6 +2,7 @@ package Assets;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -9,8 +10,10 @@ public class CreatController {
     @FXML
     TextField riskAnalysisTitleTextField;
 
+
     private Stage creatStage;
     private RiskAnalysisModel model;
+    private RiskModel riskModel;
     private int returnValue = 0;
 
     @FXML
@@ -19,6 +22,7 @@ public class CreatController {
     }
 
     public void setCreatStage(Stage creatStage) {
+
         this.creatStage = creatStage;
     }
 
@@ -33,7 +37,7 @@ public class CreatController {
     }
 
     @FXML
-    private void saveChangeAction(){
+    private void saveRiskAnalysisAction(){
         if(valid()) {
             model.setTitle(riskAnalysisTitleTextField.getText());
             returnValue = 1;
@@ -61,6 +65,18 @@ public class CreatController {
             alert.showAndWait();
             return false;
         }
+    }
+
+    @FXML
+    private void addRiskAction(){
+        RiskManager main = new RiskManager();
+        model.setTitle(riskAnalysisTitleTextField.getText());
+        main.setAddPage(riskModel);
+
+
+            creatStage.close();
+
+
     }
 
 }
