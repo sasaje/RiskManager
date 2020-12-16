@@ -18,19 +18,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Archive {
-    public void save(Project project) throws FileNotFoundException {
-        java.io.File file = new java.io.File("archive.txt");
-        java.io.PrintWriter output = new java.io.PrintWriter(file);
-        for (RiskAnalysis riskAnalysis : project.getRiskAnalyzes()){
-            output.println(riskAnalysis.toString());
-            for (Risk risk : riskAnalysis.getRisks()){
-                output.println("@#" + risk.getRiskTitle() + "\n" + "#" + risk.getProbability() + "\n" + "#" + risk.getAltProbability() + "\n"
-                        + "#" + risk.getConsequence() + "\n" +"#" + risk.getPriority() + "\n" +"#" + risk.getResponseStrategy() + "\n" +
-                        "#" + risk.getRevisedConsequence() + "\n" + "#" + risk.getRevisedPriority() + "\n");
-            }
-        }
-        output.close();
-    }
+
     /* save()
         - gennemsøg Arraylist riskAnalyzes<> i Project klassen og udskriv hvert element og dens værdier til archive.txt
 
@@ -41,7 +29,7 @@ public class Archive {
 
      */
 
-   /* void save(ActionEvent event) {
+    void save(ActionEvent event) {
 
         try {
             Scanner input = new Scanner(System.in);
@@ -101,5 +89,4 @@ public class Archive {
         }
     }
 }
-*/
-}
+

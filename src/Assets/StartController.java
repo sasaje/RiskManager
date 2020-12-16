@@ -30,7 +30,7 @@ public class StartController {
     @FXML
     private void creatBtnAction() {
         RiskAnalysisModel model = new RiskAnalysisModel("");
-        int returnValue = main.setCreatPage(model);
+        int returnValue = main.setCreatePage(model);
         if (returnValue == 1) {
             main.getRiskAnalysisTitleList().add(model);
         }
