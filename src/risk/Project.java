@@ -70,7 +70,8 @@ public class Project {
 
     /*delete a riskAnalysis*/
     public void deleteRiskAnalysis(String riskAnalysisTitle){
-
+        int indexNr = riskAnalyzes.indexOf(riskAnalysisTitle);
+        riskAnalyzes.remove(indexNr);
     }
     /*save a riskAnalysis*/
     public void saveRiskAnalysis(String riskAnalysisTitle){
