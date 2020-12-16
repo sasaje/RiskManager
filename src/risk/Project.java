@@ -63,7 +63,7 @@ public class Project {
         else{
             RiskAnalysis riskAnalysis = new RiskAnalysis();
             riskAnalysis.setRiskAnalysisTitle(riskAnalysisTitle);
-
+            currentRiskAnalysis.set(0, riskAnalysis);
             riskAnalyzes.add(riskAnalysis);
             System.out.println("RiskAnalysis created");
             //call save?
