@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Controller">
+<VBox fx:controller="Assets.StartController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #060446#060446;">
          <children>
@@ -21,7 +21,7 @@
       </HBox>
       <HBox prefHeight="52.0" prefWidth="1280.0">
          <children>
-            <Button fx:id="overviewBtn" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;Overview risk analysis">
+            <Button fx:id="topOverviewBtn" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;Overview risk analysis">
                <font>
                   <Font name="Thonburi" size="14.0" />
                </font>
@@ -33,7 +33,7 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="1280.0">
          <children>
-            <Button fx:id="creatBtn" mnemonicParsing="false" onAction="#creatBtnHandler" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #9FF81B#9FF81B; -fx-background-radius: 90;" text="+ Creat new risk analysis">
+            <Button fx:id="creatRABtn" mnemonicParsing="false" onAction="#creatBtnAction" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #9FF81B#9FF81B; -fx-background-radius: 90;" text="+ Creat new risk analysis">
                <HBox.margin>
                   <Insets left="90.0" top="40.0" />
                </HBox.margin>
@@ -64,11 +64,11 @@
             <Insets left="90.0" top="20.0" />
          </VBox.margin>
       </Label>
-      <TableView prefHeight="330.0" prefWidth="1000.0">
+      <TableView fx:id="tableView"  prefHeight="330.0" prefWidth="1000.0">
         <columns>
-          <TableColumn prefWidth="201.91236877441406" text="Risk analysis" />
-          <TableColumn minWidth="0.0" prefWidth="236.3736572265625" text="Date" />
-            <TableColumn prefWidth="286.6263427734375" text="Recent changed" />
+          <TableColumn fx:id="riskAnalysisTitle" prefWidth="201.91236877441406" text="Risk analysis" />
+          <TableColumn fx:id="publishedDate" minWidth="0.0" prefWidth="236.3736572265625" text="Date" />
+            <TableColumn fx:id="lastSavedDate" prefWidth="286.6263427734375" text="Recent changed" />
             <TableColumn prefWidth="209.88031005859375" text="Edit/Delete" />
         </columns>
          <VBox.margin>
