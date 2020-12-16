@@ -20,13 +20,12 @@ import java.util.Scanner;
 public class Archive {
 
     /* save()
-        - gemme riskAnalysis
-            - gemme risikoanalysens værdier (array).
+        - gennemsøg Arraylist riskAnalyzes<> i Project klassen og udskriv hvert element og dens værdier til archive.txt
+
 
     load()
-        - Indlæs i GUI i de forskellige metoder
-            editRisk - hente den risk som er valgt og kunne ændre i værdierne heri.
-            deleteRisk
+        - Indlæs fra archive.txt og overfør alle elementer til Arraylist riskAnalyzes<> i Project klassen.
+
 
      */
 
