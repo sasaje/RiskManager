@@ -135,6 +135,9 @@ public class RiskAnalysis {
         risk.setRevisedPriority(revisedPriority);
         int indexNr = risks.indexOf(formerTitle);
         risks.set(indexNr, risk);
+    }
 
+    public String toString(){
+        return riskAnalysisTitle;
     }
 }
