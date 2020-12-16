@@ -16,6 +16,7 @@ public class RiskAnalysis {
 
     private String riskAnalysisTitle;
     private ArrayList<Risk> risks = new ArrayList<>();
+    private ArrayList<Risk> currentRisks = new ArrayList<>();
     private LocalDateTime lastSaveDate;
     private LocalDate publishedDate;
 
@@ -106,11 +107,12 @@ public class RiskAnalysis {
         //if (arrayListContainsRisk) {
         int indexNr = risks.indexOf(riskTitle);
         Risk risk = risks.get(indexNr);
+        currentRisks.set(0, risk); //adds the currentRisk to currentRisks ArrayList
         return risk;
     }
 
     //saveRisk with double probability
-    public void saveRisk(String formerTitle, String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
+    public void saveRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
         risk.setRiskTitle(title);
         risk.setProbability(probability);
@@ -119,12 +121,15 @@ public class RiskAnalysis {
         risk.setResponseStrategy(responseStrategy);
         risk.setRevisedConsequence(revisedConsequence);
         risk.setRevisedPriority(revisedPriority);
+
+        String formerTitle = currentRisks.get(0).getRiskTitle();
+
         int indexNr = risks.indexOf(formerTitle);
         risks.set(indexNr, risk);
     }
 
     //saveRisk with String probability
-    public void saveRisk(String formerTitle, String title, String altProbability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
+    public void saveRisk(String title, String altProbability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
         Risk risk = new Risk();
         risk.setRiskTitle(title);
         risk.setAltProbability(altProbability);
@@ -133,8 +138,10 @@ public class RiskAnalysis {
         risk.setResponseStrategy(responseStrategy);
         risk.setRevisedConsequence(revisedConsequence);
         risk.setRevisedPriority(revisedPriority);
+
+        String formerTitle = currentRisks.get(0).getRiskTitle();
+
         int indexNr = risks.indexOf(formerTitle);
         risks.set(indexNr, risk);
-
     }
 }
