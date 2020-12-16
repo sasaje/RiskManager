@@ -31,15 +31,9 @@ public class RiskAnalysis {
         return risks;
     }
 
-    public void setRisks(ArrayList<Risk> risks) {
+/*    public void setRisks(ArrayList<Risk> risks) {
         this.risks = risks;
-    }
-
-    //needed?
-    /*    public LocalDate getLastSaveDate() {
-            return lastSaveDate;
-        }
-    */
+    }*/
 
     public LocalDateTime getLastSavedDate(){
         //Getting the current date-time value
@@ -95,23 +89,17 @@ public class RiskAnalysis {
         System.out.println("Risk added (with probability as String)");
     }
 
-    /*Create new riskAnalysis*/
-    public void createRiskAnalysis(String riskAnalysisTitle){
+    // A Class that represents use-defined exception
+    class NoCurrentRiskAnalysis extends Exception {
+        private String r;
 
+        public NoCurrentRiskAnalysis(String r) {
+            // Call constructor of parent Exception
+            super(r + " was not created");
+        }
     }
 
-    /*edit a riskAnalysis*/
-    public void editRiskAnalysis(String riskAnalysisTitle){
 
-    }
-    /*delete a riskAnalysis*/
-    public void deleteRiskAnalysis(String riskAnalysisTitle){
-
-    }
-    /*save a riskAnalysis*/
-    public void saveRiskAnalysis(String riskAnalysisTitle){
-
-    }
 
     /*confirmDeletionRiskAnalysis*/
     public void confirmDeletionRiskAnalysis(String riskAnalysisTitle){
@@ -134,6 +122,4 @@ public class RiskAnalysis {
         + saveRiskAnalysis(riskAnalysisTitle: String)
         + confirmDeletionRiskAnalysis(riskAnalysisTitle: String)
     * */
-
-
 }
