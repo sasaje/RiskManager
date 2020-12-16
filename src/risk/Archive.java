@@ -103,7 +103,9 @@ public class Archive {
         }
         output.close();
     }
+public void load() throws FileNotFoundException {
 
+}
 }
 
 
