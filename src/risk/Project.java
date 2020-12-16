@@ -7,13 +7,13 @@
  */
 
 package risk;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Project {
 
     private ArrayList<RiskAnalysis> riskAnalyzes = new ArrayList<>();
     private ArrayList<RiskAnalysis> currentRiskAnalysis = new ArrayList<>(); // max one riskanalysis in this arrayList
-
 
     // A Class that represents use-defined exception
     class NoCurrentRiskAnalysis extends Exception {
@@ -26,13 +26,30 @@ public class Project {
     }
 
     /*Create new riskAnalysis*/
-    public void createRiskAnalysis(RiskAnalysis riskAnalysis){
+/*    public void createRiskAnalysis(RiskAnalysis riskAnalysis){
 
         if (riskAnalysis == null) throw new NullPointerException("riskAnalysis");
 
         else{
-            riskAnalysis.setRiskAnalysisTitle(riskAnalysisTitle);
+            RiskAnalysis currentRiskAnalysis = new RiskAnalysis();
+            currentRiskAnalysis.setRiskAnalysisTitle(currentRiskAnalysis.getRiskAnalysisTitle());
             System.out.println("RiskAnalysis created");
+            //call save?
+        }
+    }
+    */
+
+    /*Create new riskAnalysis*/
+    public void createRiskAnalysis(String riskAnalysisTitle){
+
+        if (riskAnalysisTitle == null) throw new NullPointerException("riskAnalysis");
+
+        else{
+            RiskAnalysis currentRiskAnalysis = new RiskAnalysis();
+            currentRiskAnalysis.setRiskAnalysisTitle(currentRiskAnalysis.getRiskAnalysisTitle());
+            riskAnalyzes.add(currentRiskAnalysis);
+            System.out.println("RiskAnalysis created");
+            //call save?
         }
     }
 
