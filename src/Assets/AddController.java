@@ -6,7 +6,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+  //TODO choicebox,
 public class AddController {
     @FXML
     TextField riskTitleTextField, riskFileNameTextField, riskProbabilityTextField,
@@ -32,10 +32,11 @@ public class AddController {
     }
 
     public void setAddStage(Stage addStage) {
+
         this.addStage = addStage;
     }
 
-    public void setRiskModel(RiskModel riskModel) {
+    public void setRiskModel(RiskModel riskModel) { // Henter properties ind, men måske  skal vi laves om til at hente fra tekstfil
         this.riskModel = riskModel;
         riskTitleTextField.setText(riskModel.getRiskTitle());
         riskFileNameTextField.setText(riskModel.getRiskFileName());
@@ -48,11 +49,17 @@ public class AddController {
     }
 
     @FXML
-    private void saveRiskAction() {
-
-        // riskModel.setRiskTitle(riskTitleTextField.getText());
+    private void saveRiskAction() { //SaveRisk button handler
+        RiskManager main = new RiskManager();
+        // model.setTitle(riskAnalysisTitleTextField.getText());
+        addStage.close();
+        main.setViewRisksPage(riskModel);
 
     }
 
+    @FXML
+    private void cancelRiskAction() {  //cancelRisk button handler
+        addStage.close();
+    }
 
 }

@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+ //TODO recent riskanalysis choice box
+
 public class CreatController {
     @FXML
     TextField riskAnalysisTitleTextField;
@@ -26,18 +28,18 @@ public class CreatController {
         this.creatStage = creatStage;
     }
 
-    public void setModel(RiskAnalysisModel model) {
+    public void setModel(RiskAnalysisModel model) {  //Putter RiskAnalysis titel ind i textfeltet, som er hentet fra RiskAnalysisModel klassen
         this.model = model;
         riskAnalysisTitleTextField.setText(model.getTitle());
 
     }
 
-    public int getReturnValue() {
+    public int getReturnValue() { //Når saveRiskAnalysisBtn-eventet er færdigt returnerer den returnvalue. Hvis der står noget i feltet er den 1
         return returnValue;
     }
 
     @FXML
-    private void saveRiskAnalysisAction(){
+    private void saveRiskAnalysisAction(){ //Hvis der står noget i feltet sættes titlen = textfeltet
         if(valid()) {
             model.setTitle(riskAnalysisTitleTextField.getText());
             returnValue = 1;
@@ -46,11 +48,12 @@ public class CreatController {
     }
 
     @FXML
-    private void cancelAction() {
+    private void cancelAction() {  // Lukker nuværende side
         creatStage.close();
+
     }
 
-    private boolean valid() {
+    private boolean valid() {  // Hvis der står en tekst i textfeltet så giver den true ellers false
         String errorMessage = "";
         if (riskAnalysisTitleTextField.getText() == null || riskAnalysisTitleTextField.getText().equals("")) {
             errorMessage += "Insert Title. \n";
@@ -68,14 +71,11 @@ public class CreatController {
     }
 
     @FXML
-    private void addRiskAction(){
+    private void addRiskAction(){      //Add Risk button event handler
         RiskManager main = new RiskManager();
-        model.setTitle(riskAnalysisTitleTextField.getText());
+
+        creatStage.close();
         main.setAddPage(riskModel);
-
-
-            creatStage.close();
-
 
     }
 

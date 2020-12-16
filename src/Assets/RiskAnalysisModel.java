@@ -8,6 +8,9 @@ import java.util.Date;
 public class RiskAnalysisModel {
     private final StringProperty title;
 
+    //Den her og den RiskModel klass henter tekstværdierne så de kan indsættes fra RiskAnalysisModel/RiskModel til tableview
+    //Skal laves om så der kan hentes/skrives til filer
+
 
     public RiskAnalysisModel(String title) {
         this.title = new SimpleStringProperty(title);
@@ -27,19 +30,5 @@ public class RiskAnalysisModel {
         this.title.set(title);
     }
 
-   /* public Date getPublishedDate() {
-        return publishedDate;
-    }
 
-    public void setPublishedDate(Date publishedDate) {
-        this.publishedDate = publishedDate;
-    }
-
-    public Date getLastSavedDate() {
-        return lastSavedDate;
-    }
-
-    public void setLastSavedDate(Date lastSavedDate) {
-        this.lastSavedDate = lastSavedDate;
-    } */
 }

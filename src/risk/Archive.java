@@ -5,7 +5,7 @@
  * 11/12/2020
  *
  */
-
+/*
 package risk;
 
 import javafx.event.ActionEvent;
@@ -27,7 +27,7 @@ public class Archive {
         - Indlæs fra archive.txt og overfør alle elementer til Arraylist riskAnalyzes<> i Project klassen.
 
 
-     */
+
 
     void save(ActionEvent event) {
 
@@ -89,4 +89,4 @@ public class Archive {
         }
     }
 }
-
+*/

@@ -3,7 +3,10 @@ package Assets;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -27,6 +30,7 @@ public class RiskManager extends Application {
         return riskAnalysisTitleList;
     }
 
+
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -35,7 +39,7 @@ public class RiskManager extends Application {
         setStartPage();
     }
 
-    public void setRootLayout() {
+  public void setRootLayout() {
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(RiskManager.class.getResource("RootLayout.fxml"));
@@ -46,9 +50,10 @@ public class RiskManager extends Application {
         }catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }    // Planen med denne var at man kunne vise de forskellige scener inde den her blanke scene, så man på den måde ikke
+    //skulle skifte scene og lukke tidligere scene, men blot vise dem. Det virkede dog ikke og den kan ignoreres.
 
-    public void setStartPage() {
+    public void setStartPage() {   //Viser start scenen
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(RiskManager.class.getResource("RiskManager_start.fxml"));
@@ -56,18 +61,20 @@ public class RiskManager extends Application {
             rootLayout.setCenter(start);
 
             StartController controller = loader.getController();
-            controller.setMain(this);
+            controller.setMain(this);//Indgangspunktet for controller klasserne så alle variablene
+                                    // er tilgængelige fra controller og over i RiskManager
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-        public int setCreatePage(RiskAnalysisModel model) {
+        public int setCreatePage(RiskAnalysisModel model) { //Viser create scenen, som bruges til at indsætte Riskanalysis titel
             try{
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(RiskManager.class.getResource("RiskManager_creat.fxml"));
                 AnchorPane creat = loader.load();
+                // rootLayout.setCenter(creat);
 
                 Stage creatPage = new Stage();
                 creatPage.setTitle("Risk Manager 2020");
@@ -76,12 +83,12 @@ public class RiskManager extends Application {
                 Scene scene = new Scene(creat);
                 creatPage.setScene(scene);
 
-                CreatController controller1 = loader.getController();
-                controller1.setCreatStage(creatPage);
-                controller1.setModel(model);
+                CreatController creatController = loader.getController(); //Kommunikerer med controlleren og sætter scenen
+                creatController.setCreatStage(creatPage);
+                creatController.setModel(model);
 
-                creatPage.showAndWait();
-                return controller1.getReturnValue();
+                creatPage.showAndWait();//Viser scenen og venter til den bliver lukket
+                return creatController.getReturnValue();
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -89,12 +96,12 @@ public class RiskManager extends Application {
             }
         }
 
-
-        public void setAddPage(RiskModel riskModel) {
+        public void setAddPage(RiskModel riskModel) { //Viser add scenen, som bruges til at indsætte en Risk
             try {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(RiskManager.class.getResource("RiskManager_creat.fxml"));
+                loader.setLocation(RiskManager.class.getResource("RiskManager_add.fxml"));
                 AnchorPane add = loader.load();
+
 
                 Stage addPage = new Stage();
                 addPage.setTitle("Risk Manager 2020");
@@ -105,14 +112,41 @@ public class RiskManager extends Application {
 
                 AddController addController = loader.getController();
                 addController.setAddStage(addPage);
-                addController.setRiskModel(riskModel);
+               // addController.setRiskModel(riskModel);
 
                 addPage.show();
+
             }catch (IOException e) {
                 e.printStackTrace();
             }
 
         }
+
+    public void setViewRisksPage(RiskModel riskModel) { //Viser viewrisk scenen, som bruges til at vise alle risks
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(RiskManager.class.getResource("RiskManager_viewRisks.fxml"));
+            AnchorPane viewRisks = loader.load();
+
+
+            Stage viewRisksPage = new Stage();
+            viewRisksPage.setTitle("Risk Manager 2020");
+            viewRisksPage.initModality(Modality.WINDOW_MODAL);
+            viewRisksPage.initOwner(primaryStage);
+            Scene scene = new Scene(viewRisks);
+            viewRisksPage.setScene(scene);
+
+            ViewRiskController viewRiskController = loader.getController();
+            viewRiskController.setViewRiskStage(viewRisksPage);
+            //viewController.setModel(riskModel);
+
+            viewRisksPage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);

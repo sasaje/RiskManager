@@ -153,7 +153,7 @@ public class Controller implements Initializable{
 
      public void SaveBtnRiskHandler(ActionEvent event) {
          try {
-             Parent root5 = FXMLLoader.load(getClass().getResource("RiskManager_overview.fxml"));
+             Parent root5 = FXMLLoader.load(getClass().getResource("RiskManager_viewRisks.fxml"));
              Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
              window.setTitle("RISK MANAGER 2020");
              window.setScene(new Scene(root5));

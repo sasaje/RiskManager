@@ -30,7 +30,7 @@
       </HBox>
       <HBox layoutY="90.0" prefHeight="52.0" prefWidth="1280.0">
          <children>
-            <Button fx:id="topViewBtn" mnemonicParsing="false" style="-fx-background-color: transparant;" text="&gt;&gt;  View risk analysis">
+            <Button fx:id="topOverviewRiskAnalysis" mnemonicParsing="false"  style="-fx-background-color: transparant;" text="&gt;&gt;  View risk analysis">
                <font>
                   <Font name="Thonburi" size="14.0" />
                </font>
