@@ -1,12 +1,16 @@
 package Assets;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import risk.Project;
 
- //TODO recent riskanalysis choice box
+import javax.swing.*;
+
+//TODO recent riskanalysis choice box
 
 public class CreatController {
     @FXML
@@ -71,12 +75,14 @@ public class CreatController {
     }
 
     @FXML
-    private void addRiskAction(){      //Add Risk button event handler
+    private void addRiskAction(ActionEvent event){      //Add Risk button event handler
         RiskManager main = new RiskManager();
 
         creatStage.close();
         main.setAddPage(riskModel);
 
+        //Project
+        //Vi skal oprette og tilføje titel til RiskAnalysis object
     }
 
 }

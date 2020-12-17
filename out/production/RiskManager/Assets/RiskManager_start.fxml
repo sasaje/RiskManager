@@ -33,7 +33,7 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="1280.0">
          <children>
-            <Button fx:id="creatRABtn" mnemonicParsing="false" onAction="#creatBtnAction" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #9FF81B#9FF81B; -fx-background-radius: 90;" text="+ Creat new risk analysis">
+            <Button fx:id="creatRABtn" mnemonicParsing="false" onAction="#creatBtnAction" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #9FF81B#9FF81B; -fx-background-radius: 90;" text="+ Create new risk analysis">
                <HBox.margin>
                   <Insets left="90.0" top="40.0" />
                </HBox.margin>

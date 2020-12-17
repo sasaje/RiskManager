@@ -1,12 +1,10 @@
 package Assets;
 
+import risk.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -14,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class RiskManager extends Application {
@@ -148,7 +147,11 @@ public class RiskManager extends Application {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        RiskManagerController riskManagerController = new RiskManagerControllerImpl();
+        System.out.println("RiskManagerController created:" + riskManagerController);
+        StartController.riskManagerController = riskManagerController;
+        riskManagerController.bootUp();
         launch(args);
     }
 }

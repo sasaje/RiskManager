@@ -1,45 +1,23 @@
-/*
 package risk;
 
 import java.io.FileNotFoundException;
 
-public class RiskManagerController {
-Archive archive = new Archive();
-Project project = new Project();
-    public void bootUp(){
-        //archive.load();
-    }
-    public void save() throws FileNotFoundException {
-        archive.save(project);
-    }
-*/
-    /* CLASS DIAGRAM
-        - currentRiskAnalysis : RiskAnalysis
+public interface RiskManagerController {
+    void bootUp() throws FileNotFoundException;
 
-    /////////////
+    void save() throws FileNotFoundException;
 
-        + addRisk(title: String, probability: double, consequence: String, priority: int, responseStrategy: String, revisedConsequence: String, revisedPriority: double)
+    void createRiskAnalysis(String riskAnalysisTitle);
 
-        + deleteRisk(riskTitle: String)
-        + editRisk(riskTitle: String)
-        + saveRisk(riskTitle: String)
-        + confirmDeletionRisk(riskTitle: String)
+    RiskAnalysis editRiskAnalysis(String riskAnalysisTitle);
 
-        + createRiskAnalysis(riskAnalysisTitle: String)
-        + deleteRiskAnalysis(riskAnalysisTitle: String)
-        + editRiskAnalysis(riskAnalysisTitle: String)
-        + saveRiskAnalysis(riskAnalysisTitle: String)
-        + confirmDeletionRiskAnalysis(riskAnalysisTitle: String)
+    void deleteRiskAnalysis(String riskAnalysisTitle);
 
+    void saveRiskAnalysis(String riskAnalysisTitle);
 
+    void editRisk(String riskTitle);
+
+    void saveRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority);
+
+    void addObserver(Observer observer);
 }
-
-
-    RiskAnalysis - Sara
-    Risk - Malte
-    Archive (Louise)
-    GUI.FXML  (id buttons) - Jenna/Laila/Louise
-       # Prototype -> Sara
-    Controller - all
-    RiskManagerController - Sara
-*/

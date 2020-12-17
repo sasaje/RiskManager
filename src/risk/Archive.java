@@ -28,7 +28,7 @@ public class Archive {
 
 
      */
-
+/*
     void save(ActionEvent event) {
 
         try {
@@ -105,7 +105,7 @@ public class Archive {
     }
 public void load() throws FileNotFoundException {
 
-}
+}*/
 }
 
 

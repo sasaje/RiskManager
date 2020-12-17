@@ -1,14 +1,15 @@
 package Assets;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.stage.Stage;
+import risk.RiskManagerController;
 
- //TODO date(published,lastSaved) two buttons (edit/delete) in tableView
+//TODO date(published,lastSaved) two buttons (edit/delete) in tableView
 
 public class StartController {
+    public static RiskManagerController riskManagerController;
+
     @FXML
     TableView<RiskAnalysisModel> tableView = new TableView<>();
 
@@ -34,8 +35,8 @@ public class StartController {
     }
     @FXML
     private void creatBtnAction() {     //Create button eventhandler
-
-        RiskAnalysisModel model = new RiskAnalysisModel("");
+        riskManagerController.createRiskAnalysis("Test");
+        RiskAnalysisModel model = new RiskAnalysisModel("", riskManagerController);
         int returnValue = main.setCreatePage(model);
         if (returnValue == 1) {
             main.getRiskAnalysisTitleList().add(model);

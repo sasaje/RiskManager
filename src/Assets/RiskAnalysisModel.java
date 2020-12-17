@@ -2,18 +2,21 @@ package Assets;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import risk.Observer;
+import risk.RiskManagerController;
 
-import java.util.Date;
-
-public class RiskAnalysisModel {
+public class RiskAnalysisModel implements Observer {
     private final StringProperty title;
 
     //Den her og den RiskModel klass henter tekstværdierne så de kan indsættes fra RiskAnalysisModel/RiskModel til tableview
     //Skal laves om så der kan hentes/skrives til filer
 
 
-    public RiskAnalysisModel(String title) {
+    public RiskAnalysisModel(String title, RiskManagerController controller) {
         this.title = new SimpleStringProperty(title);
+
+        // Add itself as observer of the associated Risk Manager Controller
+        controller.addObserver(this);
 
     }
 
@@ -31,4 +34,15 @@ public class RiskAnalysisModel {
     }
 
 
+    @Override
+    public void update() {
+        //TODO: get data from associated RiskManagerController
+        //      and update view model
+
+        // RiskAnalysis analysis = riskManagerController.getCurrentRiskAnalysis();
+        // riskAnalysisTitle = analysis.getTitle();
+        // for (...) {
+        //   update row for tableview
+        // }
+    }
 }

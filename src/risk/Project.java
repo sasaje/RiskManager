@@ -87,4 +87,19 @@ public class Project {
         int indexNr = riskAnalyzes.indexOf(formerRiskAnalysisTitle);
         riskAnalyzes.set(indexNr, riskAnalysis);
     }
+    public void saveRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority){
+        //TODO: delegate risk update to risk analysis
+        //riskAnalyzes
+    }
+
+    /*add a risk*/
+    public void addRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority){
+
+    }
+
+    /*edit a risk*/
+
+    /*save a risk*/
+
+    /*delete a risk*/
 }

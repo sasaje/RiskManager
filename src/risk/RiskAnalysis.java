@@ -17,6 +17,7 @@ public class RiskAnalysis {
     private String riskAnalysisTitle;
     private ArrayList<Risk> risks = new ArrayList<>();
     private ArrayList<Risk> currentRisks = new ArrayList<>();
+    private Risk currentRisk;
     private LocalDateTime lastSaveDate;
     private LocalDate publishedDate;
 
@@ -88,6 +89,7 @@ public class RiskAnalysis {
         risk.setRevisedConsequence(revisedConsequence);
         risk.setRevisedPriority(revisedPriority);
         risks.add(risk);
+        //TODO: sort risks according to priority
         System.out.println("Risk added (with probability as String)");
     }
 
@@ -102,18 +104,18 @@ public class RiskAnalysis {
     }
 
     //editRisk
-    public Risk editRisk(String riskTitle) {
-        //boolean arrayListContainsRisk = risks.contains(riskTitle);
-        //if (arrayListContainsRisk) {
-        int indexNr = risks.indexOf(riskTitle);
-        Risk risk = risks.get(indexNr);
-        currentRisks.set(0, risk); //adds the currentRisk to currentRisks ArrayList
-        return risk;
+    public void editRisk(String riskTitle) {
+        for (Risk risk : risks) {
+            if (risk.getRiskTitle().equals(riskTitle)) {
+                currentRisk = risk;
+                break;
+            }
+        }
     }
 
     //saveRisk with double probability
     public void saveRisk(String title, double probability, String consequence, int priority, String responseStrategy, String revisedConsequence, double revisedPriority) {
-        Risk risk = new Risk();
+        Risk risk = new Risk(); //TODO: opdater currentRisk isf. at lave et nyt objekt
         risk.setRiskTitle(title);
         risk.setProbability(probability);
         risk.setConsequence(consequence);
@@ -121,7 +123,7 @@ public class RiskAnalysis {
         risk.setResponseStrategy(responseStrategy);
         risk.setRevisedConsequence(revisedConsequence);
         risk.setRevisedPriority(revisedPriority);
-
+        //TODO: sort risks according to priority
         String formerTitle = currentRisks.get(0).getRiskTitle();
 
         int indexNr = risks.indexOf(formerTitle);
