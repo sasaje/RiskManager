@@ -1,3 +1,4 @@
+/*
 package risk;
 
 import java.io.FileNotFoundException;
@@ -11,7 +12,7 @@ Project project = new Project();
     public void save() throws FileNotFoundException {
         archive.save(project);
     }
-
+*/
     /* CLASS DIAGRAM
         - currentRiskAnalysis : RiskAnalysis
 
@@ -30,10 +31,10 @@ Project project = new Project();
         + saveRiskAnalysis(riskAnalysisTitle: String)
         + confirmDeletionRiskAnalysis(riskAnalysisTitle: String)
 
-    */
+
 }
 
-/*
+
     RiskAnalysis - Sara
     Risk - Malte
     Archive (Louise)

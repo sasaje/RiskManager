@@ -48,7 +48,7 @@ public class CreatController {
     }
 
     @FXML
-    private void cancelAction() {  // Lukker nuværende side
+    private void cancelAction() {  // Lukker nuværende side og gælder til topoverviewBtn i creat side
         creatStage.close();
 
     }
