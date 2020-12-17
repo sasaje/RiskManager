@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.52" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="290.0" layoutY="220.0" prefHeight="471.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <TextField id="textChooseProbabilityScale" alignment="CENTER" layoutX="160.0" layoutY="84.0" prefHeight="22.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" text="Click the boxes to change probability level">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField id="textChooseProbabilityScale" alignment="CENTER" prefHeight="85.0" prefWidth="700.0" style="-fx-background-color: #F5F0F0; -fx-color: #000000;" text="Choose priority">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="veryLowButton" alignment="CENTER" layoutX="30.0" layoutY="170.0" onAction="#chooseVeryLow" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #C2FE60;" text="VERY LOW">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="95.0" layoutY="338.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;" text="Priority: LOW">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="lowButton" alignment="CENTER" layoutX="250.0" layoutY="170.0" onAction="#chooseLow" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFE200;" text="LOW">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="mediumButton" alignment="CENTER" layoutX="470.0" layoutY="170.0" onAction="#chooseMedium" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FF7600;" text="MEDIUM">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="highButton" alignment="CENTER" layoutX="140.0" layoutY="222.0" onAction="#chooseHigh" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FF7600;" text="HIGH">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="veryHighButton" alignment="CENTER" layoutX="360.0" layoutY="222.0" onAction="#chooseVeryHigh" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FF0000;" text="VERY HIGH">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addProbabilityToRiskBtn" layoutX="375.0" layoutY="330.0" mnemonicParsing="false" onAction="#addPropabilityToRisk" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 90; -fx-border-color: #9FF81B#9FF81B; -fx-background-color: WHITE; -fx-border-radius: 90; -fx-border-width: 2;" text="+ Add to risk">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button id="exitPopUpButton" fx:id="closePopUpBtn" layoutX="662.0" mnemonicParsing="false" onAction="#closePopUp" style="-fx-border-color: #F5F0F0; -fx-background-color: #F5F0F0;" text="X">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="goBackBtn" layoutX="324.0" layoutY="438.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF;" text="&lt; Go back" />
+            <Label layoutX="39.0" layoutY="138.0" text="Level scale">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>
